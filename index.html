@@ -3,36 +3,121 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
-        <link rel="stylesheet" href="style.css" />
         <title>Treloo</title>
     </head>
     <body>
-        <div class="welcome_section">
-            <header>
-                <h1 class="name_header">Treloo</h1>
-                <nav>
-                    <a href="./review">Review</a>
-                    <a href="./tips">Tips</a>
-                    <a href="./alerts">Alerts</a>
-                    <a href="./blog">Blog</a>
-                    <button>Blog</button>
+        <section class="welcome-section">
+            <img src="assets/background.png" class="background-image" />
+            <header class="main-header">
+                <h1 class="company-name">Treloo</h1>
+                <nav class="navbar">
+                    <a href="./review" class="link">Review</a>
+                    <a href="./tips" class="link">Tips</a>
+                    <a href="./alerts" class="link">Alerts</a>
+                    <a href="./blog" class="link">Blog</a>
+                    <button class="blog-btn">Blog</button>
                 </nav>
             </header>
-            <h1 class="description_header">Discover Your Life, Travel<br>Where You Want</h1>
-            <h2 class="small_description_header">Would you explore nature paradise in the world, let’s find the best<br>destination in world with us.</h2>
-        </div>
-        <div class="selection_section">
-            <div class="booking_type_selector">
-                <div class="booking_type_box booking_type_selected">
-                    <img src="assets/plane.png" />
-                    <p>Flight</p>
+            <h1 class="company-description">Discover Your Life, Travel Where You Want</h1>
+            <h2 class="company-description-banner">Would you explore nature paradise in the world, let’s find the best destination in world with us.</h2>
+        </section>
+        <section class="selection-section">
+            <div class="booking-type-selector">
+                <div class="booking-type-box booking-type-selected">
+                    <img src="assets/plane.png" class="booking-type-img" />
+                    <span class="booking-type-name">Flight</span>
                 </div>
-                <div class="booking_type_box">
-                    <img src="assets/hotel.png" />
-                    <p>Hotel</p>
+                <div class="booking-type-box">
+                    <img src="assets/hotel.png" class="booking-type-img" />
+                    <span class="booking-type-name">Hotel</span>
                 </div>
             </div>
-        </div>
+            <div class="trip-selector">
+                <div class="trip-location-box">
+                    <div class="trip-departure-location">
+                        <span class="trip-location-type">Living from</span>
+                        <select name="trip_departure_location" id="trip_departure_location" class="trip-departure-location-selector">
+                            <option value="kyiv" class="trip-departure-location-option" selected>Kyiv</option>
+                            <option value="lviv" class="trip-departure-location-option" >Lviv</option>
+                        </select>
+                    </div>
+                    <img src="assets/round_plane.png" class="trip-location-icon" />
+                    <div class="trip-arrival-location">
+                        <span class="trip-location-type">Going to</span>
+                        <select name="trip_arrival_location" id="trip_arrival_location" class="trip-arrival-location-selector">
+                            <option value="dubai" class="trip-arrival-location-option" selected>Dubai</option>
+                            <option value="new-york" class="trip-arrival-location-option">New York</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="trip-date-box">
+                    <div class="trip-departure-date">
+                        <span class="trip-date-type">Leave</span>
+                        <img src="assets/plane.png" class="trip-arrival-img" />
+                        <select name="trip_departure_date" id="trip_departure_date" class="trip-departure-date-selector">
+                            <option value="kyiv" class="trip-departure-date-option" selected>23 Jan, Sat</option>
+                            <option value="lviv" class="trip-departure-date-option" >24 Jan, Mon</option>
+                        </select>
+                    </div>
+                    <img src="assets/calendar.png" class="trip-date-icon" />
+                    <div class="trip-arrival-time">
+                        <span class="trip-date-type">Return</span>
+                        <img src="assets/plane.png" class="trip-return-img" />
+                        <select name="trip_arrival_date" id="trip_arrival_date" class="trip-arrival-date-selector">
+                            <option value="dubai" class="trip-arrival-date-option" selected>14 Jan, Thu</option>
+                            <option value="new-york" class="trip-arrival-date-option">24 Jan, Mon</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="search-btn">
+                    <img src="assets/find.png" />
+                </button>
+            </div>
+        </section>
+        <section class="offers-section">
+            <header class="offers-header">
+                <h2 class="offers-header-text">Special Upcoming Offers</h2>
+                <div class="offer-type-selector">
+                    <button class="offer-type-btn offer-type-selected">Team</button>
+                    <button class="offer-type-btn">Couple</button>
+                    <button class="offer-type-btn">Family</button>
+                </div>
+            </header>
+            <main class="offers-items">
+                <article class="offer-item">
+                    <img src="offer1.png" class="offer-img" />
+                    <span class="offer-date">14 FEB 2022</span>
+                    <span class="offer-tag">Relax</span>
+                    <span class="offer-duration">3 Days, 3 Nights</span>
+                    <p class="offer-name">Laga Sea</p>
+                    <span class="offer-cost">700$</span>
+                    <span class="offer-cost-text">/Person</span>
+                    <button class="offer-book-btn">Book Now</button>
+                </article>
+                <article class="offer-item">
+                    <img src="offer1.png" class="offer-img" />
+                    <span class="offer-date">18 JUN 2022</span>
+                    <span class="offer-tag">Adventure</span>
+                    <span class="offer-duration">4 Days, 3 Nights</span>
+                    <p class="offer-name">Ansgar Scheffold</p>
+                    <span class="offer-cost">400$</span>
+                    <span class="offer-cost-text">/Person</span>
+                    <button class="offer-book-btn">Book Now</button>
+                </article>
+                <article class="offer-item">
+                    <img src="offer3.png" class="offer-img" />
+                    <span class="offer-date">22 DEC 2022</span>
+                    <span class="offer-tag">Relax</span>
+                    <span class="offer-duration">7 Days, 6 Nights</span>
+                    <p class="offer-name">Lona X</p>
+                    <span class="offer-cost">340$</span>
+                    <span class="offer-cost-text">/Person</span>
+                    <button class="offer-book-btn">Book Now</button>
+                </article>
+            </main>
+        </section>
+        <section class="">
+
+        </section>
     </body>
 </html>
