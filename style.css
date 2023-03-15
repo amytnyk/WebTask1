@@ -1,94 +1,421 @@
 body {
-    background-color: #E5E5E5;
-    font-family: 'Poppins';
+    background-color: #F7F7F7;
     color: white;
     margin: 0;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
+body, button {
+    font-family: 'Poppins', sans-serif;
 }
 
-nav {
-    margin-top: 45px;
-    margin-right: 130px;
+button {
+    cursor: pointer;
+    border: none;
 }
 
-nav > a {
+.welcome-section {
+    height: 120vh;
+    background: no-repeat center fixed url("assets/background.png");
+    background-size: cover;
+}
+
+.main-header {
+    padding-top: 27px;
+}
+
+section {
+    padding-left: calc((100% - 1180px) / 2);
+    padding-right: calc((100% - 1180px) / 2);
+}
+
+.company-name {
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0;
+    display: inline;
+}
+
+.navbar {
+    display: inline;
+    float: right;
+}
+
+.navbar-link {
     font-size: 24px;
     text-decoration: none;
     color: inherit;
     margin-right: 50px;
 }
 
-.description_header {
-    font-size: 64px;
-    text-align: center;
-    margin-top: 10vh;
-}
-
-.small_description_header {
-    font-size: 24px;
-    text-align: center;
-    margin-top: 10vh;
-    font-weight: 500;
-}
-
-.name_header {
-    font-size: 48px;
-    margin-left: 131px;
-    margin-top: 24px;
-}
-
-.welcome_section {
-    width: 100%;
-    height: 110vh;
-    background: no-repeat center fixed url("assets/background.png");
-    background-size: cover;
-}
-
-button {
-    background: white;
-    border: none;
+.blog-btn {
+    background-color: white;
     border-radius: 10px;
     padding: 14px 44px;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     color: #3E86F5;
-    cursor: pointer;
 }
 
-.selection_section {
+.company-description, .company-description-banner {
+    text-align: center;
+}
+
+.company-description {
+    font-size: 64px;
+    font-weight: 600;
+    margin-top: 20vh;
+}
+
+.company-description-banner {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.selection-section {
     position: relative;
-    top: -10vh;
-    margin-left: 130px;
+    margin-top: -20vh;
 }
 
-.booking_type_selector {
+.booking-type-selector {
     display: inline-flex;
+    background-color: white;
     padding: 10px 10px 24px 10px;
-    background: white;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 25px 25px 0 0;
     gap: 20px;
 }
 
-.booking_type_box {
-    display: inline-flex;
+.booking-type-box {
+    display: flex;
     align-items: center;
     color: black;
-    font-size: 18px;
-    padding: 10px 30px 10px 30px;
+    padding: 20px;
     border-radius: 25px;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.booking-type-selected {
+    background: rgba(62, 134, 245, 0.2);
+    border-radius: 25px;
+}
+
+.booking-type-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.trip-selector {
+    background: white;
+    border-radius: 0 50px 50px 50px;
+    padding: 60px 48px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.trip-selector > div {
+    border: 2px solid rgba(172, 172, 172, 0.5);
+    border-radius: 25px;
+    padding: 0 20px;
+}
+
+.trip-location-box, .trip-date-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.trip-location-box {
+    gap: 20px;
+}
+
+.trip-date-box {
+    gap: 10px;
+}
+
+.trip-location-type {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+}
+
+.trip-departure-location-selector, .trip-arrival-location-selector,
+.trip-departure-date-selector, .trip-arrival-date-selector {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    font-size: 24px;
+    color: black;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.trip-date-type {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    font-size: 18px;
+    display: inline;
+}
+
+.trip-return-img {
+    transform: rotate(180deg);
+}
+
+.trip-label {
+    display: flex;
+    gap: 10px;
+}
+
+.search-btn {
+    background: rgba(62, 134, 245, 0.8);
+    border-radius: 65px;
+    padding: 50px;
+    border: none;
     cursor: pointer;
 }
 
-.booking_type_box > img {
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
+.offers-section {
+    margin-top: 20vh;
 }
 
-.booking_type_selected {
-    background: rgba(62, 134, 245, 0.2);
+.offers-header-text {
+    font-weight: 600;
+    font-size: 48px;
+    color: black;
+    text-align: center;
+}
+
+.offer-type-selector {
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    margin: auto;
+}
+
+.offer-type-btn {
+    padding: 10px 25px;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.offer-type-selected {
+    background-color: #3E86F5;
+    border-radius: 10px;
+    color: white;
+}
+
+.offers-items {
+    display: flex;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.offer-item {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    padding: 21px 13px 21px 27px;
+}
+
+.offer-book-btn {
+    padding: 11px 17px;
+    background-color: #F2F6FF;
+    border-radius: 10px;
+    color: #3E86F5;
+    font-weight: 500;
+    float: right;
+}
+
+.offer-date {
+    writing-mode: vertical-rl;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.5em;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    text-align: center;
+    vertical-align: center;
+}
+
+.offer-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offer-item-main {
+    padding: 20px 20px 0 20px;
+}
+
+.offer-name {
+    font-weight: 600;
+    font-size: 24px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.offer-tag {
+    border-radius: 100px;
+    padding: 0 15px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.offer-tag-red {
+    background-color: #FCDDEC;
+    color: #F178B6;
+}
+
+.offer-tag-blue {
+    background-color: #F1F1FD;
+    color: #7879F1;
+}
+
+.offer-duration {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.offer-cost {
+    font-weight: 500;
+    font-size: 24px;
+    color: black;
+}
+
+.offer-cost-text {
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.ad-section {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    margin-top: 240px;
+}
+
+.ad-header-text {
+    font-weight: 600;
+    font-size: 48px;
+    color: black;
+}
+
+.ad-main {
+    margin-top: 50px;
+}
+
+.ad-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 200%;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-btn {
+    background-color: #3E86F5;
+    border-radius: 10px;
+    padding: 23px 34px;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    box-shadow: 6px 6px 10px rgba(62, 134, 245, 0.2);
+}
+
+.ad-aside {
+    position: relative;
+    margin-right: 100px;
+}
+
+.ad-floating-box {
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    padding: 27px 30px;
+    text-align: center;
+}
+
+.ad-floating-box-value {
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 25px;
+    color: #3E86F5;
+    display: block;
+}
+
+.ad-floating-box-text {
+    font-weight: 300;
+    font-size: 18px;
+    color: black;
+}
+
+.ad-floating-box:nth-of-type(1) {
+    top: 56px;
+    right: 0;
+    transform: translate(50%);
+}
+
+.ad-floating-box:nth-of-type(2) {
+    top: 377px;
+    left: 0;
+    transform: translate(-50%);
+}
+
+.ad-floating-box:nth-of-type(3) {
+    top: 537px;
+    right: 0;
+    transform: translate(50%);
+    padding: 27px 45px;
+}
+
+.recommendations-section {
+    margin-top: 20vh;
+}
+
+.recommendations-header-text {
+    font-weight: 600;
+    font-size: 48px;
+    color: black;
+    text-align: center;
+}
+
+.recommendations-type-selector {
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    margin: auto;
+}
+
+.recommendations-type-btn {
+    padding: 10px 25px;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.recommendations-type-selected {
+    background-color: white;
+    border-radius: 10px;
+    color: #3E86F5;
 }

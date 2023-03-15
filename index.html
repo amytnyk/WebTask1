@@ -1,227 +1,267 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Treloo</title>
-    </head>
-    <body>
-        <section class="welcome-section">
-            <img src="assets/background.png" class="background-image" />
-            <header class="main-header">
-                <h1 class="company-name">Treloo</h1>
-                <nav class="navbar">
-                    <a href="./review" class="navbar-link">Review</a>
-                    <a href="./tips" class="navbar-link">Tips</a>
-                    <a href="./alerts" class="navbar-link">Alerts</a>
-                    <a href="./blog" class="navbar-link">Blog</a>
-                    <button class="blog-btn">Blog</button>
-                </nav>
-            </header>
-            <h1 class="company-description">Discover Your Life, Travel Where You Want</h1>
-            <h2 class="company-description-banner">Would you explore nature paradise in the world, let’s find the best destination in world with us.</h2>
-        </section>
-        <section class="selection-section">
-            <div class="booking-type-selector">
-                <div class="booking-type-box booking-type-selected">
-                    <img src="assets/plane.png" class="booking-type-img" />
-                    <span class="booking-type-name">Flight</span>
-                </div>
-                <div class="booking-type-box">
-                    <img src="assets/hotel.png" class="booking-type-img" />
-                    <span class="booking-type-name">Hotel</span>
-                </div>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Treloo</title>
+</head>
+<body>
+<section class="welcome-section">
+    <header class="main-header">
+        <h1 class="company-name">Treloo</h1>
+        <nav class="navbar">
+            <a href="./review" class="navbar-link">Review</a>
+            <a href="./tips" class="navbar-link">Tips</a>
+            <a href="./alerts" class="navbar-link">Alerts</a>
+            <a href="./blog" class="navbar-link">Blog</a>
+            <button class="blog-btn">Blog</button>
+        </nav>
+    </header>
+    <h1 class="company-description">Discover Your Life, Travel<br>Where You Want</h1>
+    <h2 class="company-description-banner">Would you explore nature paradise in the world, let’s find the best <br>
+        destination in world with us.</h2>
+</section>
+<section class="selection-section">
+    <div class="booking-type-selector">
+        <div class="booking-type-box booking-type-selected">
+            <img src="assets/plane.png" class="booking-type-img" alt="" />
+            <span class="booking-type-name">Flight</span>
+        </div>
+        <div class="booking-type-box">
+            <img src="assets/hotel.png" class="booking-type-img" alt="" />
+            <span class="booking-type-name">Hotel</span>
+        </div>
+    </div>
+    <div class="trip-selector">
+        <div class="trip-location-box">
+            <div class="trip-departure-location">
+                <label for="trip_departure_location" class="trip-location-type">Living from</label>
+                <select name="trip_departure_location" id="trip_departure_location"
+                                                                     class="trip-departure-location-selector">
+                    <option value="kyiv" class="trip-departure-location-option">Kyiv</option>
+                    <option value="lviv" class="trip-departure-location-option" selected>Lviv</option>
+                    <option value="brody" class="trip-departure-location-option">Brody</option>
+                    <option value="vinnytsia" class="trip-departure-location-option">Vinnytsia</option>
+                </select>
             </div>
-            <div class="trip-selector">
-                <div class="trip-location-box">
-                    <div class="trip-departure-location">
-                        <span class="trip-location-type">Living from</span>
-                        <select name="trip_departure_location" id="trip_departure_location" class="trip-departure-location-selector">
-                            <option value="kyiv" class="trip-departure-location-option" selected>Kyiv</option>
-                            <option value="lviv" class="trip-departure-location-option" >Lviv</option>
-                        </select>
-                    </div>
-                    <img src="assets/round_plane.png" class="trip-location-icon" />
-                    <div class="trip-arrival-location">
-                        <span class="trip-location-type">Going to</span>
-                        <select name="trip_arrival_location" id="trip_arrival_location" class="trip-arrival-location-selector">
-                            <option value="dubai" class="trip-arrival-location-option" selected>Dubai</option>
-                            <option value="new-york" class="trip-arrival-location-option">New York</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="trip-date-box">
-                    <div class="trip-departure-date">
-                        <span class="trip-date-type">Leave</span>
-                        <img src="assets/plane.png" class="trip-arrival-img" />
-                        <input type="date" class="trip-departure-date-selector" value="23 Jan, Sat" />
-                    </div>
-                    <img src="assets/calendar.png" class="trip-date-icon" />
-                    <div class="trip-arrival-time">
-                        <span class="trip-date-type">Return</span>
-                        <img src="assets/plane.png" class="trip-return-img" />
-                        <input type="date" class="trip-arrival-date-selector" value="14 Jan, Thu" />
-                    </div>
-                </div>
-                <button class="search-btn">
-                    <img src="assets/find.png" class="search-btn-img" />
-                </button>
+            <img src="assets/round_plane.png" class="trip-location-icon"/>
+            <div class="trip-arrival-location">
+                <label for="trip_arrival_location" class="trip-location-type">Going to</label>
+                <select name="trip_arrival_location" id="trip_arrival_location" class="trip-arrival-location-selector">
+                    <option value="dubai" class="trip-arrival-location-option">Dubai</option>
+                    <option value="new-york" class="trip-arrival-location-option">New York</option>
+                    <option value="prague" class="trip-arrival-location-option" selected>Prague</option>
+                    <option value="london" class="trip-arrival-location-option">London</option>
+                </select>
             </div>
-        </section>
-        <section class="offers-section">
-            <header class="offers-header">
-                <h2 class="offers-header-text">Special Upcoming Offers</h2>
-                <div class="offer-type-selector">
-                    <button class="offer-type-btn offer-type-selected">Team</button>
-                    <button class="offer-type-btn">Couple</button>
-                    <button class="offer-type-btn">Family</button>
+        </div>
+        <div class="trip-date-box">
+            <div class="trip-departure-date">
+                <div class="trip-label">
+                    <span class="trip-date-type">Leave</span>
+                    <img src="assets/plane2.svg" class="trip-arrival-img"  alt="" />
                 </div>
-            </header>
-            <main class="offers-items">
-                <article class="offer-item">
-                    <img src="offer1.png" class="offer-img" />
-                    <span class="offer-date">14 FEB 2022</span>
-                    <span class="offer-tag">Relax</span>
-                    <span class="offer-duration">3 Days, 3 Nights</span>
-                    <p class="offer-name">Laga Sea</p>
-                    <span class="offer-cost">700$</span>
-                    <span class="offer-cost-text">/Person</span>
-                    <button class="offer-book-btn">Book Now</button>
-                </article>
-                <article class="offer-item">
-                    <img src="offer2.png" class="offer-img" />
-                    <span class="offer-date">18 JUN 2022</span>
-                    <span class="offer-tag">Adventure</span>
-                    <span class="offer-duration">4 Days, 3 Nights</span>
-                    <p class="offer-name">Ansgar Scheffold</p>
-                    <span class="offer-cost">400$</span>
-                    <span class="offer-cost-text">/Person</span>
-                    <button class="offer-book-btn">Book Now</button>
-                </article>
-                <article class="offer-item">
-                    <img src="offer3.png" class="offer-img" />
-                    <span class="offer-date">22 DEC 2022</span>
-                    <span class="offer-tag">Relax</span>
-                    <span class="offer-duration">7 Days, 6 Nights</span>
-                    <p class="offer-name">Lona X</p>
-                    <span class="offer-cost">340$</span>
-                    <span class="offer-cost-text">/Person</span>
-                    <button class="offer-book-btn">Book Now</button>
-                </article>
-            </main>
-        </section>
-        <section class="ad-section">
-            <main class="ad-main">
-                <h2 class="ad-header-text">Travel Any Corner of The World With Us</h2>
-                <p class="ad-text">Would you explore nature paradise in the world, let’s find the best destination in world with us, Would you explore nature paradise in the world, let’s find the best destination in world with us. Would you explore nature paradise in the world, let’s find the best destination in world with us.</p>
-                <p class="ad-text">Would you explore nature paradise in the world, let’s find the best destination in world with us.</p>
-                <button class="contact-btn">Contact Us</button>
-            </main>
-            <aside class="ad-aside">
-                <img src="assets/ad.png" class="ad-img" />
-                <div class="ad-floating-box">
-                    <span class="ad-floating-box-value">300+</span>
-                    <span class="ad-floating-box-text">DESTINATIONS</span>
+                <input type="date" class="trip-departure-date-selector" value="23 Jan, Sat" />
+            </div>
+            <img src="assets/calendar.png" class="trip-date-icon" alt="" />
+            <div class="trip-arrival-time">
+                <div class="trip-label">
+                    <span class="trip-date-type">Return</span>
+                    <img src="assets/plane2.svg" class="trip-return-img"  alt="" />
                 </div>
-                <div class="ad-floating-box">
-                    <span class="ad-floating-box-value">5000+</span>
-                    <span class="ad-floating-box-text">TOURISTS</span>
-                </div>
-                <div class="ad-floating-box">
-                    <span class="ad-floating-box-value">150+</span>
-                    <span class="ad-floating-box-text">HOTELS</span>
-                </div>
-            </aside>
-        </section>
-        <section class="recommendations-section">
-            <header class="recommendations-header">
-                <h2 class="recommendations-header-text">Recommended destination</h2>
-                <div class="recommendations-type-selector">
-                    <button class="recommendations-type-btn recommendations-type-selected">Popular</button>
-                    <button class="recommendations-type-btn">Adventure</button>
-                    <button class="recommendations-type-btn">Beath</button>
-                </div>
-            </header>
-            <main class="recommendations-items">
-                <article class="recommendations-item">
-                    <img src="assets/recommendation1.png" class="recommendations-item-img" />
-                    <div class="recommendations-item-rating">
-                        <img src="assets/star.png" class="recommendations-item-rating-img" />
-                        <span class="recommendations-item-rating-value">4.5</span>
-                    </div>
-                    <h4 class="recommendations-item-header">Kina Mountain</h4>
-                    <img src="assets/marker.png" class="recommendations-item-marker-img" />
-                    <span class="recommendations-item-location">Cambodia</span>
-                </article>
-                <article class="recommendations-item">
-                    <img src="assets/recommendation2.png" class="recommendations-item-img" />
-                    <div class="recommendations-item-rating">
-                        <img src="assets/star.png" class="recommendations-item-rating-img" />
-                        <span class="recommendations-item-rating-value">4.2</span>
-                    </div>
-                    <h4 class="recommendations-item-header">Kina Mountain</h4>
-                    <img src="assets/marker.png" class="recommendations-item-marker-img" />
-                    <span class="recommendations-item-location">Cambodia</span>
-                </article>
-                <article class="recommendations-item">
-                    <img src="assets/recommendation3.png" class="recommendations-item-img" />
-                    <div class="recommendations-item-rating">
-                        <img src="assets/star.png" class="recommendations-item-rating-img" />
-                        <span class="recommendations-item-rating-value">3.5</span>
-                    </div>
-                    <h4 class="recommendations-item-header">Kina Mountain</h4>
-                    <img src="assets/marker.png" class="recommendations-item-marker-img" />
-                    <span class="recommendations-item-location">Cambodia</span>
-                </article>
-            </main>
-        </section>
-        <section class="reviews-section">
-            <main class="reviews-main">
-                <article class="review-item">
-                    <img src="assets/quotes.png" class="review-item-img" />
-                    <p class="review-item-text">Our trip to Morocco was truly a onece in a lifetime experience and we are so grateful to everyone that made it happen seamlessly. Our travel planner, Jaouad, was increadible.</p>
-                    <span class="review-item-author">-Vand D</span>
-                    <span class="review-item-author-role">Happy Treloo</span>
-                    <img src="assets/profile1.png" class="review-profile-img" />
-                    <div class="review-item-profile-rating">
-                        <img src="assets/star.png" class="review-item-profile-rating-img" />
-                        <span class="review-item-profile-rating-value">4.5</span>
-                    </div>
-                </article>
-                <article class="review-item">
-                    <img src="assets/quotes.png" class="review-item-img" />
-                    <p class="review-item-text">Our trip to Morocco was truly a onece in a lifetime experience and we are so grateful to everyone that made it happen seamlessly. Our travel planner, Jaouad, was increadible.</p>
-                    <span class="review-item-author">-Tru Vio</span>
-                    <span class="review-item-author-role">Happy Treloo</span>
-                    <img src="assets/profile2.png" class="review-profile-img" />
-                    <div class="review-item-profile-rating">
-                        <img src="assets/star.png" class="review-item-profile-rating-img" />
-                        <span class="review-item-profile-rating-value">4.9</span>
-                    </div>
-                </article>
-            </main>
-            <footer class="reviews-footer">
-                <button class="reviews-left-btn">
-                    <img src="assets/left.png" class="reviews-control-btn" />
-                </button>
-                <button class="reviews-right-btn">
-                    <img src="assets/right.png" class="reviews-control-btn" />
-                </button>
-            </footer>
-        </section>
-        <section class="register-section">
-            <img src="assets/register.png" class="register-img" />
-            <h2 class="register-header">Don't Miss The 50% Discount if You register Today</h2>
-            <button class="register-btn">Register Today</button>
-        </section>
-        <footer>
-            <span class="footer-copyright-text">© 2022 Treloo LLC - All right reserved.</span>
-            <nav class="footer-navbar">
-                <a href="./review" class="footer-navbar-link">Review</a>
-                <a href="./tips" class="footer-navbar-link">Tips</a>
-                <a href="./alerts" class="footer-navbar-link">Alerts</a>
-                <a href="./blog" class="footer-navbar-link">Blog</a>
-            </nav>
-        </footer>
-    </body>
+                <input type="date" class="trip-arrival-date-selector" value="14 Jan, Thu"  />
+            </div>
+        </div>
+        <button class="search-btn">
+            <img src="assets/find.png" class="search-btn-img"  alt="" />
+        </button>
+    </div>
+</section>
+<section class="offers-section">
+    <header class="offers-header">
+        <h2 class="offers-header-text">Special Upcoming Offers</h2>
+        <div class="offer-type-selector">
+            <button class="offer-type-btn offer-type-selected">Team</button>
+            <button class="offer-type-btn">Couple</button>
+            <button class="offer-type-btn">Family</button>
+        </div>
+    </header>
+    <main class="offers-items">
+        <article class="offer-item">
+            <div class="offer-item-header">
+                <img src="assets/loga-sea.png" class="offer-img" alt="" />
+                <span class="offer-date">14 FEB 2022</span>
+            </div>
+            <div class="offer-item-main">
+                <span class="offer-tag offer-tag-red">Relax</span>
+                <span class="offer-duration">3 Days, 3 Nights</span>
+                <p class="offer-name">Laga Sea</p>
+                <span class="offer-cost">700$</span>
+                <span class="offer-cost-text">/Person</span>
+                <button class="offer-book-btn">Book Now</button>
+            </div>
+        </article>
+        <article class="offer-item">
+            <div class="offer-item-header">
+                <img src="assets/ansgar-scheffold.png" class="offer-img" alt="" />
+                <span class="offer-date">18 JUN 2022</span>
+            </div>
+            <div class="offer-item-main">
+                <span class="offer-tag offer-tag-blue">Adventure</span>
+                <span class="offer-duration">4 Days, 3 Nights</span>
+                <p class="offer-name">Ansgar Scheffold</p>
+                <span class="offer-cost">400$</span>
+                <span class="offer-cost-text">/Person</span>
+                <button class="offer-book-btn">Book Now</button>
+            </div>
+        </article>
+        <article class="offer-item">
+            <div class="offer-item-header">
+                <img src="assets/lona-x.png" class="offer-img" alt="" />
+                <span class="offer-date">22 DEC 2022</span>
+            </div>
+            <div class="offer-item-main">
+                <span class="offer-tag offer-tag-red">Relax</span>
+                <span class="offer-duration">7 Days, 6 Nights</span>
+                <p class="offer-name">Lona X</p>
+                <span class="offer-cost">340$</span>
+                <span class="offer-cost-text">/Person</span>
+                <button class="offer-book-btn">Book Now</button>
+            </div>
+        </article>
+    </main>
+</section>
+<section class="ad-section">
+    <main class="ad-main">
+        <h2 class="ad-header-text">Travel Any Corner of The World With Us</h2>
+        <p class="ad-text">Would you explore nature paradise in the world, let’s find the best destination in world with
+            us, Would you explore nature paradise in the world, let’s find the best destination in world with us. Would
+            you explore nature paradise in the world, let’s find the best destination in world with us.</p>
+        <p class="ad-text">Would you explore nature paradise in the world, let’s find the best destination in world with
+            us.</p>
+        <button class="contact-btn">Contact Us</button>
+    </main>
+    <aside class="ad-aside">
+        <img src="assets/ad.png" class="ad-img" alt="" />
+        <div class="ad-floating-box">
+            <span class="ad-floating-box-value">300+</span>
+            <span class="ad-floating-box-text">DESTINATIONS</span>
+        </div>
+        <div class="ad-floating-box">
+            <span class="ad-floating-box-value">5000+</span>
+            <span class="ad-floating-box-text">TOURISTS</span>
+        </div>
+        <div class="ad-floating-box">
+            <span class="ad-floating-box-value">150+</span>
+            <span class="ad-floating-box-text">HOTELS</span>
+        </div>
+    </aside>
+</section>
+<section class="recommendations-section">
+    <header class="recommendations-header">
+        <h2 class="recommendations-header-text">Recommended Destination</h2>
+        <div class="recommendations-type-selector">
+            <button class="recommendations-type-btn recommendations-type-selected">Popular</button>
+            <button class="recommendations-type-btn">Adventure</button>
+            <button class="recommendations-type-btn">Beath</button>
+        </div>
+    </header>
+    <main class="recommendations-items">
+        <article class="recommendations-item">
+            <img src="assets/recommendation1.png" class="recommendations-item-img" alt="" />
+            <div class="recommendations-item-rating">
+                <img src="assets/star.png" class="recommendations-item-rating-img" alt="" />
+                <span class="recommendations-item-rating-value">3.4</span>
+            </div>
+            <h4 class="recommendations-item-header">Kina Mountain</h4>
+            <img src="assets/marker.png" class="recommendations-item-marker-img" alt="" />
+            <span class="recommendations-item-location">Cambodia</span>
+        </article>
+        <article class="recommendations-item">
+            <img src="assets/recommendation2.png" class="recommendations-item-img" alt="" />
+            <div class="recommendations-item-rating">
+                <img src="assets/star.png" class="recommendations-item-rating-img" alt="" />
+                <span class="recommendations-item-rating-value">4.5</span>
+            </div>
+            <h4 class="recommendations-item-header">Kina Mountain</h4>
+            <img src="assets/marker.png" class="recommendations-item-marker-img" alt="" />
+            <span class="recommendations-item-location">Cambodia</span>
+        </article>
+        <article class="recommendations-item">
+            <img src="assets/recommendation3.png" class="recommendations-item-img" alt="" />
+            <div class="recommendations-item-rating">
+                <img src="assets/star.png" class="recommendations-item-rating-img" alt="" />
+                <span class="recommendations-item-rating-value">4.2</span>
+            </div>
+            <h4 class="recommendations-item-header">Kina Mountain</h4>
+            <img src="assets/marker.png" class="recommendations-item-marker-img" alt="" />
+            <span class="recommendations-item-location">Cambodia</span>
+        </article>
+        <article class="recommendations-item">
+            <img src="assets/recommendation4.png" class="recommendations-item-img" alt="" />
+            <div class="recommendations-item-rating">
+                <img src="assets/star.png" class="recommendations-item-rating-img" alt="" />
+                <span class="recommendations-item-rating-value">3.5</span>
+            </div>
+            <h4 class="recommendations-item-header">Kina Mountain</h4>
+            <img src="assets/marker.png" class="recommendations-item-marker-img" alt="" />
+            <span class="recommendations-item-location">Cambodia</span>
+        </article>
+    </main>
+</section>
+<section class="reviews-section">
+    <main class="reviews-main">
+        <article class="review-item">
+            <img src="assets/quotes.png" class="review-item-img"/>
+            <p class="review-item-text">Our trip to Morocco was truly a onece in a lifetime experience and we are so
+                grateful to everyone that made it happen seamlessly. Our travel planner, Jaouad, was increadible.</p>
+            <span class="review-item-author">-Vand D</span>
+            <span class="review-item-author-role">Happy Treloo</span>
+            <img src="assets/profile1.png" class="review-profile-img"/>
+            <div class="review-item-profile-rating">
+                <img src="assets/star.png" class="review-item-profile-rating-img"/>
+                <span class="review-item-profile-rating-value">4.5</span>
+            </div>
+        </article>
+        <article class="review-item">
+            <img src="assets/quotes.png" class="review-item-img"/>
+            <p class="review-item-text">Our trip to Morocco was truly a onece in a lifetime experience and we are so
+                grateful to everyone that made it happen seamlessly. Our travel planner, Jaouad, was increadible.</p>
+            <span class="review-item-author">-Tru Vio</span>
+            <span class="review-item-author-role">Happy Treloo</span>
+            <img src="assets/profile2.png" class="review-profile-img"/>
+            <div class="review-item-profile-rating">
+                <img src="assets/star.png" class="review-item-profile-rating-img"/>
+                <span class="review-item-profile-rating-value">4.9</span>
+            </div>
+        </article>
+    </main>
+    <footer class="reviews-footer">
+        <button class="reviews-left-btn">
+            <img src="assets/left.png" class="reviews-control-btn"/>
+        </button>
+        <button class="reviews-right-btn">
+            <img src="assets/right.png" class="reviews-control-btn"/>
+        </button>
+    </footer>
+</section>
+<section class="register-section">
+    <img src="assets/register.png" class="register-img"/>
+    <h2 class="register-header">Don't Miss The 50% Discount if You register Today</h2>
+    <button class="register-btn">Register Today</button>
+</section>
+<footer>
+    <span class="footer-copyright-text">© 2022 Treloo LLC - All right reserved.</span>
+    <nav class="footer-navbar">
+        <a href="./review" class="footer-navbar-link">Review</a>
+        <a href="./tips" class="footer-navbar-link">Tips</a>
+        <a href="./alerts" class="footer-navbar-link">Alerts</a>
+        <a href="./blog" class="footer-navbar-link">Blog</a>
+    </nav>
+</footer>
+</body>
 </html>
